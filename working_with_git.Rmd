@@ -1,0 +1,38 @@
+---
+title: "Building a git workflow - or How I learned to stop worrying about my laptop getting stolen or broken"
+subtitle: "(or )"
+output: slidy_presentation
+---
+
+## Setting up this talk 
+
+### Credit where credit is due:
+
+All of my meaningful progress in git is thanks to this invaluable resource:
+
+
+
+
+## What is git?
+
+- why are you doing this to me
+- I'm just trying to learn R here
+- don't make me think about file structures and code
+
+## how do you back up your work?
+
+- what if your laptop goes missing?
+- what if you accidentally delete your H:?
+- what if you save over code that worked with broken crummy code??
+
+## How do you share your work?
+
+- What if you keep doign the same thigns over and over again?
+- what if the person after you is going to have to do the same things over and over again
+- how do we share code and make it work? In our organization? with collaborators outside?
+
+## What is git?
+
+
+
+
