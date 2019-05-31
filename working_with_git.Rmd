@@ -1,14 +1,25 @@
 ---
 title: "Building a git workflow - or How I learned to stop worrying about my laptop getting stolen or broken"
-subtitle: "(or )"
-output: slidy_presentation
+
+output: 
+  slidy_presentation:
+    code_folding: hide
 ---
 
 ## Setting up this talk 
 
-### Credit where credit is due:
+### My history with git
 
-All of my meaningful progress in git is thanks to this invaluable resource:
+- Introduced to Git by Coursera's R for data science course.
+- Proceeded to pretend it didn't exist for 6 years.
+- Decided to get back to it in 2019
+- Still Learning!
+
+## My progress in Git has been encouraged by these two resources.
+
+[Happy git With R](https://happygitwithr.com/)
+
+[Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159/)
 
 
 
@@ -18,12 +29,15 @@ All of my meaningful progress in git is thanks to this invaluable resource:
 - why are you doing this to me
 - I'm just trying to learn R here
 - don't make me think about file structures and code
+- but seriously:
+
 
 ## how do you back up your work?
 
 - what if your laptop goes missing?
 - what if you accidentally delete your H:?
 - what if you save over code that worked with broken crummy code??
+- (https://happygitwithr.com/big-picture.html#big-picture)
 
 ## How do you share your work?
 
@@ -31,8 +45,91 @@ All of my meaningful progress in git is thanks to this invaluable resource:
 - what if the person after you is going to have to do the same things over and over again
 - how do we share code and make it work? In our organization? with collaborators outside?
 
-## What is git?
+## My workflow for using Git and Github
 
+- It's not perfect - and it is a bit clunky to get started with. 
+- you may want to read through materials and work out your own.
+
+## 1 - go to github and start a new repository
+
+- Github now allows for private repositories for free tier users - ensure that you use private repos.
+
+```{r, echo = F, out.width="75%"}
+knitr::include_graphics("assets/githubrepo.png")
+```
+
+## 2 - copy  the link to clone the repo
+
+```{r, echo = F, out.width="75%"}
+knitr::include_graphics("assets/clonerepo.png")
+```
+
+
+## 3 - clone the repo to my local r folder
+
+
+- check the 'Terminal' to to ensure the folder is going where you want to go
+- [Command Line commands!!!](https://swcarpentry.github.io/shell-novice/reference/)
+- `cd` is used to navigate through file paths
+- `cd ../` will take you up one file layer
+
+- use the following git command:
+
+```git clone linkIjustcopied.git```
+
+
+```{r, echo = F, out.width="75%"}
+knitr::include_graphics("assets/terminal_clone.png")
+```
+
+
+## 4 - Start a new project, with an existing directory
+
+
+```{r, echo = F, out.width="75%"}
+knitr::include_graphics("assets/existing_dir.png")
+```
+
+
+## 5 - make folders to organize my project
+
+- create folders to store your data and other stuff you don't want/need to track
+- with command line:
+    - `md data` will create a new folder called 'data'
+    - `mkdir data` will do the same thing
+    - i still often just make new folders with windows explorer
+    
+    
+## 6 - last step - very important!!
+
+- tell git to ignore certain things
+- open .gitignore
+- add the files that you want git to not update followed by a '/'
+- this lets git know that this is a folder you want ignored
+- **IF YOU ARE WORKING WITH PI/PHI** - let's chat more and see how we can ensure privacy policies are adhered to.
+
+
+```{r, echo = F, out.width="40%"}
+git_files <- c("assets/git_ignore.png","assets/git_ignore_files.png")
+
+knitr::include_graphics(git_files)
+```
+
+
+## 7 - Ready to start working!
+
+- Work as I normally do
+- when it's time to save (multiple times a day because i'm paranoid):
+    1. `ctrl + s`
+    2. Go to terminal and type `git add .`
+    3. type `git commit -m "mycommitmessage"` *if you don't add this you can get into annoying text editors*
+    4. type `git push`
+    5. Done! i'm in the cloud
+    
+## 8 Other workflows exist, and i'm still learning!
+
+- let's try some together.
+- You can also use git locally and not move anything to github.
 
 
 
